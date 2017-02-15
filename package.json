@@ -1,0 +1,29 @@
+{
+  "name": "moscowcitydata",
+  "version": "0.0.1",
+  "description": "Angular app that aggregates Moscsow city open data",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alfumit/citydata.git"
+  },
+  "keywords": [
+    "angular",
+    "moscow",
+    "open",
+    "data"
+  ],
+  "author": "Alexander Fedotov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alfumit/citydata/issues"
+  },
+  "homepage": "https://github.com/alfumit/citydata#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cli": "^1.2.2"
+  }
+}
