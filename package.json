@@ -4,7 +4,7 @@
   "description": "Angular app that aggregates Moscsow city open data",
   "main": "index.js",
   "scripts": {
-    "start":"node server/app.js",
+    "start": "node server/app.js",
     "test": "test"
   },
   "repository": {
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/alfumit/citydata#readme",
   "devDependencies": {
+    "express": "^4.14.1",
     "gulp": "^3.9.1",
     "gulp-cli": "^1.2.2"
   }
