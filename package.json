@@ -4,6 +4,7 @@
   "description": "Angular app that aggregates Moscsow city open data",
   "main": "index.js",
   "scripts": {
+    "start":"node server/app.js",
     "test": "test"
   },
   "repository": {
