@@ -4,7 +4,7 @@ var express = require("express"),
     app = express();
 
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname, '/index.html'));
+    res.send("Hello world");
 });
 
 //console.log(path.join(__dirname, '../front-end/index.html'))
