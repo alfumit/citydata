@@ -1,8 +1,33 @@
-<html>
+<html ng-app="mcda">
     <head>
         <title>Moscow City Data Aggregator</title>
     </head>
     <body>
         <h2>LA LA LAnd</h2>
+        <info-card card-title="City Center" street-info="Tverskaya" accidents=10>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+		<script>
+            "use strict;"
+        angular.module("mcda",[])
+        .component("infoCard",{
+            bindings: {
+                cardTitle: "@",
+                streetInfo: "@",
+                accidents: "@"
+            },
+            template: `
+            <div class="info-card">
+                <h2>{{$ctrl.cardTitle}}</h2>
+                <div>
+                    <h3>Details on street {{$ctrl.streetInfo}}</h3>
+                    <p>Overall acceidents this month {{$ctrl.accidents}}</p>
+                </div>
+            </div>
+            `,
+            controller: function() {
+              console.log("eee");  
+            }
+        })
+        </script>
     </body>
 </html>
