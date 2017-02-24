@@ -1,8 +1,8 @@
 "use strict";
 var express = require("express"),
     path = require("path"),
-    app = express(),
-    pg = require('pg');
+    app = express();
+   // pg = require('pg');
 
 app.set('port', (process.env.PORT || 5000));
 
