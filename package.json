@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/alfumit/citydata#readme",
   "devDependencies": {
+    "pg": "4.x",
     "express": "^4.14.1",
     "gulp": "^3.9.1",
     "gulp-cli": "^1.2.2"
