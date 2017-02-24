@@ -4,10 +4,28 @@
     </head>
     <body>
         <h2>LA LA LAnd</h2>
-        <info-card card-title="City Center" street-info="Tverskaya" accidents=10>
+        <div ng-repeat="cardInfo in cardsData">
+            <info-card card-title="cardInfo.cardTitle" street-info="cardInfo.streetInfo" accidents="cardInfo.accidents">
+        </div>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 		<script>
             "use strict;"
+        var cardsData = 
+            [{
+                cardTitle: "City Center",
+                streetInfo: "Tverskaya",
+                accidents: 10
+            },
+            {
+                cardTitle: "UZAO",
+                streetInfo: "Teply Stan",
+                accidents: "1"
+            },
+            {
+                 cardTitle: "SZAO",
+                 streetInfo: "Leningradskoe schosse",
+                 accidents: "100"
+            }];
         angular.module("mcda",[])
         .component("infoCard",{
             bindings: {
@@ -25,7 +43,7 @@
             </div>
             `,
             controller: function() {
-              console.log("eee");  
+             // this.cardsData  = cardsData;
             }
         })
         </script>
