@@ -18,7 +18,7 @@ app.get('/db', function (request, response) {
       response.send("AYAYAYAY ");
       console.log(client);
     client.query('SELECT * FROM test_table', function(err, result) {
-//      done();
+      done();
       if (err)
        { console.error(err); response.send("Error " + err); }
       else
