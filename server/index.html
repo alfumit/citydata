@@ -38,11 +38,12 @@
             },
             template: `
 {{$ctrl.data.rows}}
+            <div ng-repeat="row in $ctrl.data.rows">
             <div class="info-card">
-                <h2>{{$ctrl.cardTitle}}</h2>
+                <h2>{{row.name}}</h2>
                 <div>
-                    <h3>Details on street {{$ctrl.streetInfo}}</h3>
-                    <p>Overall acceidents this month {{$ctrl.accidents}}</p>
+                    <h3>Details on street {{row.id}}</h3>
+                    <p>Overall acceidents this month {{row.id}}</p>
                 </div>
             </div>
             `,
