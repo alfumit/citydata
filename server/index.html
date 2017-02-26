@@ -47,7 +47,6 @@
             </div>
             `,
             controller: function($http) {
-             // this.cardsData  = cardsData;
                 $http.get("/db").then((response)=>{
                     this.data = response.data;
                 })
