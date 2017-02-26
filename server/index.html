@@ -4,9 +4,12 @@
     </head>
     <body>
         <h2>LA LA LAnd</h2>
+        <info-card></info-card>
+<!--
         <div ng-repeat="cardInfo in cardsData">
             <info-card card-title="cardInfo.cardTitle" street-info="cardInfo.streetInfo" accidents="cardInfo.accidents">
         </div>
+-->
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 		<script>
             "use strict;"
@@ -34,6 +37,7 @@
                 accidents: "@"
             },
             template: `
+{{$ctrl.data}}
             <div class="info-card">
                 <h2>{{$ctrl.cardTitle}}</h2>
                 <div>
@@ -42,8 +46,11 @@
                 </div>
             </div>
             `,
-            controller: function() {
+            controller: function($http) {
              // this.cardsData  = cardsData;
+                $http.get("/db").then((response)=>{
+                    this.data = response.data;
+                })
             }
         })
         </script>
