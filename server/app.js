@@ -22,8 +22,8 @@ app.get('/db', function (request, response) {
       if (err)
        { console.error(err); response.send("Error " + err); }
       else
-                 { console.error("No error"); response.send("NO Error " + err); }
-       //{ response.render('pages/db', {results: result.rows} ); }
+       //          { console.error("No error"); response.send("NO Error " + err); }
+       { response.render('pages/db', {results: result.rows} ); }
     });
   });
 });
