@@ -33,7 +33,7 @@ app.get('/db', function (request, response) {
 app.get('/mongodb', function (request, response) {
 	console.log(process.env,process.env.MONGODB_URI);
   mongo.connect(process.env.MONGODB_URI, function(err, db) {
-  	console.log("Connected correctly to server",db);
+  	console.log(err," Connected correctly to server ",db);
   	var test = db.collection("test");
   	console.log(test);
   	response.send(test);
