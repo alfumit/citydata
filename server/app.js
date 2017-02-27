@@ -2,7 +2,8 @@
 var express = require("express"),
     path = require("path"),
     app = express(),
-    pg = require("pg");
+    pg = require("pg"),
+    mongo = require("mongoose");
 
 app.set('port', (process.env.PORT || 5000));
 
@@ -26,6 +27,12 @@ app.get('/db', function (request, response) {
           
        {response.send(result)}
     });
+  });
+});
+
+app.get('/mongodb', function (request, response) {
+  mongo.connect(process.env.MONGODB_URI, function(err, client, done) {
+  	console.log(err,client,done);
   });
 });
 
