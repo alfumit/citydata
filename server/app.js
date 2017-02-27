@@ -32,6 +32,7 @@ app.get('/db', function (request, response) {
 
 app.get('/mongodb', function (request, response) {
   mongo.connect(process.env.MONGODB_URI, function(err, client, done) {
+  	response.send(client)
   	console.log(err,client,done);
   });
 });
