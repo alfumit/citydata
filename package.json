@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/alfumit/citydata#readme",
   "dependencies": {
+    "mongoose": "3.4.0",
     "pg": "4.x",
     "express": "^4.14.1"
   },
