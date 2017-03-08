@@ -8,30 +8,15 @@ var express = require("express"),
 app.set('port', (process.env.PORT || 5000));
 
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname, '/index.html'));
+    res.sendFile(path.join(__dirname, '../front-end/index.html'));
 });
 
 //console.log(path.join(__dirname, '../front-end/index.html'))
-//app.use(express.static(path.join(__dirname, '/index.html')));
+app.use(express.static(path.join(__dirname, '../')));
 
-app.get('/db', function (request, response) {
-  pg.connect(process.env.DATABASE_URL, function(err, client, done) {
-      //response.send("AYAYAYAY ");
-      console.log(client);
-    client.query('SELECT * FROM test_table', function(err, result) {
-      done();
-      if (err)
-       { console.error(err); response.send("Error " + err); }
-      else
-       //          { console.error("No error"); response.send("NO Error " + err); }
-          
-       {response.send(result)}
-    });
-  });
-});
 
 app.get('/mongodb', function (request, response) {
-	console.log(process.env,process.env.MONGODB_URI);
+	console.log(process.env,process.env.MONGODB_URI || "mongodb://localhost:27017");
   mongo.connect(process.env.MONGODB_URI, function(err, db) {
   	console.log(err," Connected correctly to server ",db);
   	var test = db.collection("test");
